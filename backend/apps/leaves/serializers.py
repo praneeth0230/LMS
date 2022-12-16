@@ -23,6 +23,7 @@ class AddLeaveSerializer(serializers.ModelSerializer):
             'users',
             'description',
             'leave_status',
+            'leave_balance',
         ]
 
 class LeaveUpdateSerializer(serializers.ModelSerializer): 
@@ -40,6 +41,7 @@ class LeaveUpdateSerializer(serializers.ModelSerializer):
             'users',
             'description',
             'leave_status',
+            'leave_balance',
         ]
         
 class LeaveListSerializer(serializers.ModelSerializer):

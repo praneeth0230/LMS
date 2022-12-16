@@ -17,6 +17,8 @@ class Leave(models.Model):
         User,on_delete=CASCADE, blank=False, null=False, related_name='ID')
     leave_type = models.CharField(
         'Leave Type', blank=False, null=False, default='N/A', choices=LEAVE_TYPE, max_length=50)
+    leave_balance = models.IntegerField(
+        'Leave Balance', blank=False, null=False, default=0)
     from_date = models.DateTimeField('From Date', blank=False, null=False)
     to_date = models.DateTimeField('To Date', blank=False, null=False)
     duration = models.IntegerField(
@@ -31,6 +33,7 @@ class Leave(models.Model):
                                    max_length=400, default='Description & Responsibilities Assigned')
     leave_status = models.CharField(
         'Leave Status', blank=False, null=False, default='N/A', choices=LEAVE_STATUS, max_length=30)
+
 
     def __str__(self):
         return self.user_name

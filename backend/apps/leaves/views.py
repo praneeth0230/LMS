@@ -26,6 +26,7 @@ class LeaveFilter(filters.FilterSet):
             'users',
             'description',
             'leave_status',
+            'leave_balance',
         ]
 
 
