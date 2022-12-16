@@ -13,10 +13,8 @@ class Leave(models.Model):
     class meta(object):
         db_table = 'leave'
 
-    employee_id = models.ForeignKey(
-        User,on_delete=CASCADE, blank=False, null=False, related_name='Id')
-    user_name = models.CharField(
-        'Name', blank=False, null=False, db_index=True, max_length=40)
+    users = models.ForeignKey(
+        User,on_delete=CASCADE, blank=False, null=False, related_name='ID')
     leave_type = models.CharField(
         'Leave Type', blank=False, null=False, default='N/A', choices=LEAVE_TYPE, max_length=50)
     from_date = models.DateTimeField('From Date', blank=False, null=False)

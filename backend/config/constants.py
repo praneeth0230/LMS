@@ -132,7 +132,8 @@ LEAVE_STATUS = (
     ('req_modification', 'Request Modification'),
     ('forwarded', 'Forwarded'),
     ('approved', 'Approved'),
-    ('rejected','Rejected')
+    ('rejected','Rejected'),
+    ('deleted', 'Deleted')
 )
 
 
